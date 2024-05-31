@@ -1,7 +1,5 @@
 function validateUser(event) {
     event.preventDefault();
-
-
     let username = document.getElementById("username").value;
     let password = document.getElementById("password").value;
     let valid = true;
