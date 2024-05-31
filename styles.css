@@ -342,9 +342,14 @@ button:hover {
 
 
 .cancelbtn {
-    width: auto;
-    padding: 10px 18px;
-    background-color: #f44336;
+    display:inline;
+    background-color:var(--fondo);
+    width: 100%;
+    color: var(--fondo-blanco);
+}
+
+.cancelbtn :hover{
+    background-color: #04AA6D;
 }
 
 #username-error {
@@ -363,10 +368,16 @@ button:hover {
 }
 
 .btn-log {
-    padding: 0.2rem;
-    border-radius: 1rem;
-    border: solid 1px;
-    background-color: #7ea597;
+display:inline;
+background-color:var(--fondo);
+width: 100%;
+color: var(--fondo-blanco);
+margin-top: 1rem;
+margin-bottom: 1rem;
+}
+
+.logeo{
+    display: inline;
 }
 
 .imgcontainer {
@@ -382,16 +393,29 @@ img.avatar {
 }
 
 
-.container {
-    padding: 16px;
-    background-color: #f1f1f1
+.container-log {
+    padding: 5vh 5vw;
+    margin-bottom: 1rem;
+    background-color: #f1f1f1;
+}
+.remember{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2rem;
+}
+
+.container-cancel{
+    padding-top: 0.5vh 0.5vw;
+    padding-left: 5vh 5vw;
+    padding-right: 5vh 5vw;
+    background-color: #f1f1f1;
 }
 
 
 span.psw {
     float: right;
-    padding-top: 16px;
-}
+    }
 
 .welcome-message {
     display: none;
@@ -458,3 +482,116 @@ Mostrar el menú hamburguesa solo en dispositivos móviles
 
 }
 */
+
+/* Media Query para celu */
+@media screen and (max-width: 480px) {
+    .header {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .logo img {
+        height: 25vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-left: 14vh;
+    }
+    .gradient {
+        display: none;
+        background: linear-gradient(180deg, transparent, #ebebeb);
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        height: 15vh;
+        left: 0;
+        z-index: 3;
+    }
+    .search-bar {
+        width: 100%;
+    }
+    .categories ul {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+    }
+    .categories li {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+    .products-grid {
+        grid-template-columns: 1fr;
+    }
+
+    #carouselExampleInterval{
+        height: 100%;
+    }
+
+    .search{
+    height:5.8vh ; 
+    }
+
+    .footer-texto {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    .modal-content {
+        flex-direction: column;
+        width: 90%;
+        margin: 20px auto;
+    }
+    .container-log {
+        padding: 2vh 2vw;
+    }
+    .remember {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .logeo {
+        flex-direction: column;
+    }
+}
+
+/* Media Query para tablet */
+@media screen and (min-width: 481px) and (max-width: 768px) {
+    .header {
+        padding: 10px 10px;
+    }
+    .logo img {
+        height: 10vw;
+    }
+    .search-bar {
+        width: 70%;
+    }
+    .categories ul {
+        flex-wrap: wrap;
+        width: 100%;
+    }
+    .categories li {
+        margin-right: 10px;
+        margin-bottom: 10px;
+    }
+    .products-grid {
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    }
+    .footer-texto {
+        max-width: 100%;
+        gap: 10px;
+        flex-wrap: wrap;
+    }
+    .modal-content {
+        width: 80%;
+        margin: 20px auto;
+    }
+    .container-log {
+        padding: 4vh 4vw;
+    }
+    .remember {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .logeo {
+        flex-direction: column;
+    }
+}

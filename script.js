@@ -32,13 +32,17 @@ function validateUser(event) {
         welcomeHeader.style.fontWeight = "bold";
 
         const profileImage = document.createElement('img');
-        profileImage.src = "/img/images.png"; 
+        profileImage.src = "./img/images.png"; 
         profileImage.alt = "Foto de perfil";
         profileImage.style.width = "4rem";
         profileImage.style.marginRight = "10px";
 
         const logoutButton = document.createElement('button');
         logoutButton.innerText = "Salir";
+        logoutButton.style.border = "none";
+        logoutButton.style.background = "#3862cc"; 
+        logoutButton.style.color = "white";
+        logoutButton.style.paddingLeft = "2vh";
         logoutButton.addEventListener('click', function() {
             // Limpia datos de inicio de sesión
             localStorage.removeItem('isLoggedIn');
