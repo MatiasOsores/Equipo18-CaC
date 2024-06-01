@@ -536,6 +536,11 @@ Mostrar el menú hamburguesa solo en dispositivos móviles
         align-items: center;
         text-align: center;
     }
+
+    .footer{
+        display: flex;
+        height: auto;
+    }
     .modal-content {
         flex-direction: column;
         width: 90%;
